@@ -37,3 +37,11 @@ El proyecto utiliza Git Flow con las siguientes ramas:
 - feature/clientes-crud
 - release/v1.1.0
 - hotfix/facturacion-descuento
+
+## Objetivo académico
+
+Este repositorio fue creado para aplicar un Plan de Gestión de la Configuración del Software usando Git, Git Flow, commits convencionales, Pull Request, releases y automatización CI/CD.
+
+## Empresa simulada
+
+Comercializadora Santa Cruz S.R.L.
