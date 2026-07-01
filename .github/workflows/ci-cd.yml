@@ -1,0 +1,41 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Build simulado
+        run: echo 'Build ejecutado correctamente'
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Ejecutar pruebas
+        run: echo 'Pruebas ejecutadas correctamente'
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Ejecutar lint
+        run: echo 'Lint ejecutado correctamente'
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Deploy staging
+        run: echo 'Deploy a staging simulado correctamente'
