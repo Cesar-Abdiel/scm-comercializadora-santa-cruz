@@ -11,3 +11,19 @@
 ## Línea base inicial
 
 La línea base inicial del proyecto contiene la estructura mínima necesaria para controlar los ítems de configuración del sistema web de Comercializadora Santa Cruz S.R.L.
+
+## Responsables de la configuración
+
+| Rol | Responsabilidad |
+|---|---|
+| Administrador SCM | Controlar la línea base y versiones |
+| Desarrollador | Crear ramas feature y commits convencionales |
+| Revisor CCB | Aprobar solicitudes de cambio |
+| Responsable CI/CD | Verificar pipeline y despliegue a staging |
+
+## Criterios de control
+
+- Todo cambio debe estar asociado a un commit.
+- Los cambios importantes deben pasar por Pull Request.
+- Las versiones se documentan en CHANGELOG.md.
+- Las ramas principales son main y develop.
