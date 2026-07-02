@@ -5,10 +5,10 @@ on:
     branches:
       - main
       - develop
-      - feature/clientes-crud
   pull_request:
     branches:
       - develop
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,6 +21,9 @@ jobs:
         run: |
           echo "Build ejecutado correctamente"
           ls
+          test -f README.md
+          test -d src
+          test -d docs
 
   test:
     runs-on: ubuntu-latest
@@ -32,6 +35,7 @@ jobs:
       - name: Ejecutar pruebas
         run: |
           echo "Pruebas ejecutadas correctamente"
+          python --version
 
   lint:
     runs-on: ubuntu-latest
@@ -43,11 +47,13 @@ jobs:
       - name: Ejecutar lint
         run: |
           echo "Lint ejecutado correctamente"
+          echo "Validación de estilo simulada"
 
   deploy-staging:
     runs-on: ubuntu-latest
     needs: lint
     steps:
-      - name: Deploy staging
+      - name: Desplegar en staging
         run: |
           echo "Deploy a staging simulado correctamente"
+          echo "Ambiente: staging"
