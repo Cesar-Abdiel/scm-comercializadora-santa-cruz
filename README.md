@@ -1,36 +1,37 @@
 # Sistema Web - Comercializadora Santa Cruz S.R.L.
 
 [![CI/CD](https://github.com/Cesar-Abdiel/scm-comercializadora-santa-cruz/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Cesar-Abdiel/scm-comercializadora-santa-cruz/actions/workflows/ci-cd.yml)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.1-blue)
 ![SCM](https://img.shields.io/badge/SCM-GitFlow-success)
 
-Repositorio acadï¿½mico para documentar el Plan de Gestiï¿½n de la Configuraciï¿½n del Software SCM aplicado a un sistema web de Comercializadora Santa Cruz S.R.L.
+Repositorio académico para documentar el Plan de Gestión de la Configuración del Software SCM aplicado a un sistema web de Comercializadora Santa Cruz S.R.L.
 
-## Descripciï¿½n del proyecto
+## Descripción del proyecto
 
-El sistema simulado permite gestionar clientes, productos, pedidos, facturaciï¿½n y reportes comerciales.  
-Este repositorio se utiliza como evidencia del proceso SCM, incluyendo control de versiones, lï¿½nea base, gestiï¿½n de cambios, releases y automatizaciï¿½n CI/CD.
+El sistema simulado permite gestionar clientes, productos, pedidos, facturación y reportes comerciales.
 
-## Mï¿½dulos simulados
+Este repositorio se utiliza como evidencia del proceso SCM, incluyendo control de versiones, línea base, gestión de cambios, releases y automatización CI/CD.
+
+## Módulos simulados
 
 - Clientes
 - Productos
 - Pedidos
-- Facturaciï¿½n
+- Facturación
 - Reportes
 
 ## Estructura del proyecto
 
-- docs: documentaciï¿½n del plan SCM.
-- src: cï¿½digo fuente simulado del sistema.
-- tests: pruebas bï¿½sicas.
-- config: archivos de configuraciï¿½n.
+- docs: documentación del plan SCM.
+- src: código fuente simulado del sistema.
+- tests: pruebas básicas.
+- config: archivos de configuración.
 - database: scripts de base de datos.
-- .github/workflows: configuraciï¿½n del pipeline CI/CD.
+- .github/workflows: configuración del pipeline CI/CD.
 
-## Flujo de trabajo
+## Flujo de trabajo Git Flow
 
-El proyecto utiliza Git Flow con las siguientes ramas:
+El proyecto utiliza las siguientes ramas:
 
 - main
 - develop
@@ -38,10 +39,11 @@ El proyecto utiliza Git Flow con las siguientes ramas:
 - release/v1.1.0
 - hotfix/facturacion-descuento
 
-## Objetivo académico
+## Pipeline CI/CD
 
-Este repositorio fue creado para aplicar un Plan de Gestión de la Configuración del Software usando Git, Git Flow, commits convencionales, Pull Request, releases y automatización CI/CD.
+El workflow de GitHub Actions ejecuta los siguientes jobs:
 
-## Empresa simulada
-
-Comercializadora Santa Cruz S.R.L.
+- build
+- test
+- lint
+- deploy-staging
